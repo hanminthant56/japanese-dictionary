@@ -13,7 +13,7 @@ for (let i = 0; i < jitadata.length; i++) {
         `+ list[0].word +`
         </button>
         </h2>
-        <div id="panelsStayOpen`+ count +`" class="accordion-collapse collapse show">
+        <div id="panelsStayOpen`+ count +`" class="accordion-collapse collapse">
             <div class="accordion-body">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
