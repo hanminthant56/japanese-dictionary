@@ -1,3 +1,12 @@
+/* For global */
+.hmtshow{
+    display: block;
+}
+
+.hmthide {
+    display: none;
+}
+
 #topbar {
     align-items: center;
     justify-content: center;

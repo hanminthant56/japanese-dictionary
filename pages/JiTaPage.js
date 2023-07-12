@@ -1,11 +1,18 @@
-let data = "";
+// variable session
+let jitadata = "";
 let count = 0;
-let wordContainer = document.getElementById("word-container");
-// For loop of the whole data
-for (let i = 0; i < jitadata.length; i++) {
+let jitaContainer = document.getElementById("jita-container");
+
+// For loop of the whole jitadata
+for (let i = 0; i < jita.length; i++) {
+    // i have to use count becoz bs accordion need to be different
     count += count + 1;
-    const list = jitadata[i];
-    data += `
+    const list = jita[i];
+    // for list, example
+    //[
+    //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],
+    //]
+    jitadata += `
    <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
         <h2 class="accordion-header">
@@ -18,10 +25,10 @@ for (let i = 0; i < jitadata.length; i++) {
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">`+ list[0].meaning +`</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">NO DATA YET</h6>
+                        <p class="card-text">Maybe sentence example</p>
+                        <a href="#" class="card-link">no data</a>
+                        <a href="#" class="card-link">coming soon</a>
                     </div>
                 </div>
             </div>
@@ -31,6 +38,7 @@ for (let i = 0; i < jitadata.length; i++) {
     `;
 }
 // End For loop of the whole data
-wordContainer.innerHTML = data;
+//preparing by adding all the data by adding to the relating box or pages
+jitaContainer.innerHTML = jitadata;
 
 
