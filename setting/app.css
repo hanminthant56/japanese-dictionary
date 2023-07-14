@@ -7,7 +7,31 @@
     display: none;
 }
 
+
 #topbar {
     align-items: center;
     justify-content: center;
+}
+
+.home-wrapper {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#greetone {
+    padding: 20px;
+}
+
+#greettwo {
+    font-size: 1.7em;
+}
+
+/* If you dont like it, you can delete this later  */
+#similarword-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
