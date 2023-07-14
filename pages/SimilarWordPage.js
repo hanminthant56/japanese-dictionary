@@ -9,7 +9,7 @@ for (let i = 0; i < similarword.length; i++) {
     //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],
     //]
     similarworddata += `
-    <div class="alert alert-dark mb-3" role="alert">
+    <div class="alert alert-dark mb-3 similarword-list" role="alert">
         `+ list.word +`
         <a tabindex="0" class="btn btn-info" role="button" 
             data-bs-toggle="popover" 
@@ -22,10 +22,10 @@ for (let i = 0; i < similarword.length; i++) {
     `;
     switch(list.space) {
         case "needed":
-            similarworddata += "<div class='m-3'></div>";
+            similarworddata += "<hr>";
             break;
         case "little needed":
-            similarworddata += "<div class='m-2'></div>";
+            similarworddata += "<hr class='mb-2 mt-0'>";
     }
 }
 // End For loop of the whole data
