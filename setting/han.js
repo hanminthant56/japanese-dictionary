@@ -33,12 +33,6 @@ for (let s = 0; s < datasbox.length; s++) {
             getbox.classList.remove("hmthide");
             // and then show it 
             getbox.classList.add("hmtshow");
-        }else {
-            // if there is no equal, we have to hide that box or page again
-            // **************************************
-            // this is needed or not, i dont get it now i need to sleep. i have to check here 
-            // **************************************
-            // getbox.classList.add("hmthide");
         }
     }
 

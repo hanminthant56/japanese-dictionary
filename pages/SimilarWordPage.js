@@ -1,9 +1,9 @@
 let similarworddata = "";
 let similarwordContainer = document.getElementById("similarword-container");
-// For loop of the whole data
-// similarword variable is from similarWordDB.js file
-for (let i = 0; i < similarword.length; i++) {
-    const list = similarword[i];
+
+// function
+// this function is created to use in map
+function similarwordlist(list) {
     // for list, example
     //[
     //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],
@@ -20,6 +20,7 @@ for (let i = 0; i < similarword.length; i++) {
         </a>
     </div>
     `;
+    // there is space that i created to seperate for the different words
     switch(list.space) {
         case "needed":
             similarworddata += "<hr>";
@@ -28,6 +29,9 @@ for (let i = 0; i < similarword.length; i++) {
             similarworddata += "<hr class='mb-2 mt-0'>";
     }
 }
+// this is mapping the array from database
+similarword.map(similarwordlist);
+
 // End For loop of the whole data
 //preparing by adding all the data by adding to the relating box or pages
 similarwordContainer.innerHTML = similarworddata;

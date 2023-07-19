@@ -11,18 +11,19 @@ for( var i=0; i < dropdownitem.length; i++){
         // using for loop to get the show boxes
         // variable datasbox is in the han.js
         for(var j = 0; j < datasbox.length; j++) {
+            const boxes = datasbox[j];
             // first, hide all the things and will show specific one
-            datasbox[j].classList.add("hmthide");
+            boxes.classList.add("hmthide");
             // to get the datasboxname attribute that i created
-            let datasboxname = datasbox[j].attributes.datasboxname.value;
+            let datasboxname = boxes.attributes.datasboxname.value;
             // comparing from dropbox name and data box name to show specific one
             if ( dropname == datasboxname ) {
                 // create a session to save the page or box for the use
                 sessionStorage.setItem('dropname', dropname);
                 // first, have to remove hide class name coz there can be 
-                datasbox[j].classList.remove("hmthide");
+                boxes.classList.remove("hmthide");
                 // and then show it 
-                datasbox[j].classList.add("hmtshow");
+                boxes.classList.add("hmtshow");
             }
         }
     } );

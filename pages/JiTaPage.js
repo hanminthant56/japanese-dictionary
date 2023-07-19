@@ -3,17 +3,18 @@ let jitadata = "";
 let count = 0;
 let jitaContainer = document.getElementById("jita-container");
 
-// For loop of the whole jitadata
-for (let i = 0; i < jita.length; i++) {
+// function
+// this function is created to use in map
+function jitalist(list) {
+
     // i have to use count becoz bs accordion need to be different
     count += count + 1;
-    const list = jita[i];
     // for list, example
     //[
     //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],
     //]
     jitadata += `
-   <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
         <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen`+ count +`" aria-expanded="true" aria-controls="panelsStayOpen`+ count +`">
@@ -34,9 +35,10 @@ for (let i = 0; i < jita.length; i++) {
             </div>
         </div>
     </div>
-</div>
+    </div>
     `;
 }
+jita.map(jitalist);
 // End For loop of the whole data
 //preparing by adding all the data by adding to the relating box or pages
 jitaContainer.innerHTML = jitadata;
