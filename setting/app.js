@@ -18,8 +18,16 @@ for( var i=0; i < dropdownitem.length; i++){
             let datasboxname = boxes.attributes.datasboxname.value;
             // comparing from dropbox name and data box name to show specific one
             if ( dropname == datasboxname ) {
+                // getting attribute that i created
+                let bgcolor = boxes.attributes.hanbgcolor.value;
+                let pagename = boxes.attributes.pagename.value;
+                //dropdownbtn is created in han.js
+                dropdownbtn.style.backgroundColor = bgcolor;
+                dropdownbtn.textContent = pagename;
                 // create a session to save the page or box for the use
                 sessionStorage.setItem('dropname', dropname);
+                sessionStorage.setItem('bgcolor', bgcolor);
+                sessionStorage.setItem('pagename', pagename);
                 // first, have to remove hide class name coz there can be 
                 boxes.classList.remove("hmthide");
                 // and then show it 

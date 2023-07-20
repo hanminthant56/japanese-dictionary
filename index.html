@@ -22,28 +22,50 @@
     <!-- topbar -->
     <nav class="navbar bg-body-tertiary" id="topbar">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" id="menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button id="dropdownbtn" class="btn btn-secondary dropdown-toggle hmthide" id="menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           Home
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" dropname="home" href="#">Home</a></li>
           <li><a class="dropdown-item" dropname="jita" href="#">自動詞他動詞</a></li>
           <li><a class="dropdown-item" dropname="similarword" href="#">Similar Word</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><a class="dropdown-item" dropname="soun2" href="#">SouMaToMe N2</a></li>
         </ul>
       </div>
     </nav>
     <!-- End topbar -->
-    <div id="home" class="datas hmthide" datasboxname="home">
+    <!-- I use hanbgcolor attri coz there is a buit-in bgcolor -->
+    <!-- And I dont use '-' in attri coz it is difficult to get the data back -->
+    <!-- Test '-' by getting the data -->
+    <div id="home" 
+          class="datas hmthide" 
+          hanbgcolor="" 
+          pagename="Home" 
+          datasboxname="home">
       <div class="home-wrapper">
         <span id="greetone">Hello Guys, this is just my dictionary. And then, you can check it out.</span>
         <div id="greettwo">!!!Welcome!!!</div>
       </div>
     </div>
-    <div id="jita-container" class="datas hmthide" datasboxname="jita">
+    <div id="jita-container" 
+          class="datas hmthide" 
+          hanbgcolor="#cfe2ff" 
+          pagename="自動詞他動詞" 
+          datasboxname="jita">
       
     </div>
-    <div id="similarword-container" class="datas hmthide" datasboxname="similarword">
+    <div id="similarword-container" 
+          class="datas hmthide" 
+          hanbgcolor="aliceblue" 
+          pagename="Similar Word" 
+          datasboxname="similarword">
+      
+    </div>
+    <div id="soun2-container" 
+          class="datas hmthide" 
+          hanbgcolor="#ff00449c" 
+          pagename="SouMaToMe N2" 
+          datasboxname="soun2">
       
     </div>
   </div>

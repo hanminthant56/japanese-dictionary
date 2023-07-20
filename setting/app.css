@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+#topbar #dropdownbtn {
+    color: black;
+}
+
 #home .home-wrapper {
     display: flex;
     height: 500px;
@@ -34,6 +38,8 @@
 }
 
 #similarword-container .similarword-list{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: aliceblue;
 }
