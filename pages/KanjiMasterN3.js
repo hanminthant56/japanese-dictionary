@@ -53,7 +53,9 @@ function kanjimastern3list(list) {
             </div>
         </div>
     </div>
-                        `;
+    `;
+    kanjimastern3eg = "";
+    kanjimastern3others = "";
 }
                     kanjimastern3.map(kanjimastern3list);
                     // <h6 class="card-subtitle mb-2 text-body-secondary">NO DATA YET</h6>
