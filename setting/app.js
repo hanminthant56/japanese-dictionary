@@ -4,10 +4,13 @@ let jitaContainerbox = document.getElementById("jita-container");
 
 //for dropdown click to change to show the datas 
 for( var i=0; i < dropdownitem.length; i++){
+    const dropdown = dropdownitem[i];
     //getting each dropdown by using for loop and getting dropdown data by clicking 
-    dropdownitem[i].addEventListener("click", function(e) { 
+    dropdown.addEventListener("click", function(e) { 
         // to get the dropname attribute created by me
         dropname = e.target.attributes.dropname.value;
+        //to get the dropdown list name
+        let pagename = dropdown.textContent;
         // using for loop to get the show boxes
         // variable datasbox is in the han.js
         for(var j = 0; j < datasbox.length; j++) {
@@ -20,7 +23,6 @@ for( var i=0; i < dropdownitem.length; i++){
             if ( dropname == datasboxname ) {
                 // getting attribute that i created
                 let bgcolor = boxes.attributes.hanbgcolor.value;
-                let pagename = boxes.attributes.pagename.value;
                 //dropdownbtn is created in han.js
                 dropdownbtn.style.backgroundColor = bgcolor;
                 dropdownbtn.textContent = pagename;

@@ -30,6 +30,7 @@
           <li><a class="dropdown-item" dropname="jita" href="#">自動詞他動詞</a></li>
           <li><a class="dropdown-item" dropname="similarword" href="#">Similar Word</a></li>
           <li><a class="dropdown-item" dropname="soun2" href="#">SouMaToMe N2</a></li>
+          <li><a class="dropdown-item" dropname="kanjimastern3" href="#">Kanji Master N3</a></li>
         </ul>
       </div>
     </nav>
@@ -40,7 +41,6 @@
     <div id="home" 
           class="datas hmthide" 
           hanbgcolor="" 
-          pagename="Home" 
           datasboxname="home">
       <div class="home-wrapper">
         <span id="greetone">Hello Guys, this is just my dictionary. And then, you can check it out.</span>
@@ -50,23 +50,33 @@
     <div id="jita-container" 
           class="datas hmthide" 
           hanbgcolor="#cfe2ff" 
-          pagename="自動詞他動詞" 
           datasboxname="jita">
       
     </div>
     <div id="similarword-container" 
           class="datas hmthide" 
           hanbgcolor="aliceblue" 
-          pagename="Similar Word" 
           datasboxname="similarword">
       
     </div>
     <div id="soun2-container" 
           class="datas hmthide" 
           hanbgcolor="#ff00449c" 
-          pagename="SouMaToMe N2" 
           datasboxname="soun2">
-      
+    </div>
+    <div id="kanjimastern3-container" 
+          class="datas hmthide" 
+          hanbgcolor="#2b511b" 
+          datasboxname="kanjimastern3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              kunyomi:<h5 class="card-title">Card title</h5>
+              onyomi:<h5 class="card-title">Card title</h5>
+              <p class="card-text">examples</p>
+              <p class="card-text">examples</p>
+            </div>
+            
+          </div>
     </div>
   </div>
   <!-- end the whole container -->
@@ -82,10 +92,14 @@
         <!-- Pages database -->
         <script src="database/JiTaDB.js"></script>
         <script src="database/SimilarWordDB.js"></script>
+        <script src="database/SoumatameN2DB.js"></script>
+        <script src="database/KanjiMasterN3DB.js"></script>
         <!-- End Pages database -->
         <!-- Pages -->
         <script src="pages/JiTaPage.js"></script>
         <script src="pages/SimilarWordPage.js"></script>
+        <script src="pages/SoumatomeN2.js"></script>
+        <script src="pages/KanjiMasterN3.js"></script>
         <!-- End Pages -->
         <!-- my css -->
         <script src="setting/han.js"></script>

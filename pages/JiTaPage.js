@@ -18,14 +18,14 @@ function jitalist(list) {
     <div class="accordion-item">
         <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen`+ count +`" aria-expanded="true" aria-controls="panelsStayOpen`+ count +`">
-        `+ list[0].word +`
+        `+ list.word +`
         </button>
         </h2>
         <div id="panelsStayOpen`+ count +`" class="accordion-collapse collapse">
             <div class="accordion-body">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">`+ list[0].meaning +`</h5>
+                        <h5 class="card-title">`+ list.meaning +`</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">NO DATA YET</h6>
                         <p class="card-text">Maybe sentence example</p>
                         <a href="#" class="card-link">no data</a>
