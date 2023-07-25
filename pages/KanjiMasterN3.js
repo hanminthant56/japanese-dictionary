@@ -19,8 +19,6 @@ function kanjimastern3list(list) {
         kanjimastern3others += `<li class="list-group-item KMN3-others-lists">`+ o +`</li> `;
         
     });
-    
-    console.log("examples ",kanjimastern3eg);
     // for list, example
     //[
     //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],

@@ -26,11 +26,12 @@
 }
 
 #home #greetone {
-    padding: 20px;
+    font-size: 1.7em;
 }
 
 #home #greettwo {
-    font-size: 1.7em;
+    color: darkblue;
+    padding: 20px;
 }
 
 #jita-container .card-body {
