@@ -46,3 +46,86 @@ for (let s = 0; s < datasbox.length; s++) {
 
     //(end)this code copy from app.js 
 }
+
+// ့!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! here also make some check and make real your package
+function han(hanAttri) {
+    let attri = document.querySelector(hanAttri);
+    function createhanToggleBtn(icon1, icon2, attriId, color='#4672fe') {
+        let i = 0, icon1text = "", icon1class = "",icon2text = "", icon2class = "";
+        while(i < icon1.length) {
+            if(icon1[i] == "class") {
+                icon1class = icon1[i+1];
+            }
+            if(icon1[i] == "text") {
+                icon1text = icon1[i+1]
+            }
+            i++;
+        }
+        i = 0;
+        while(i < icon2.length) {
+            if(icon2[i] == "class") {
+                icon2class = icon2[i+1];
+            }
+            if(icon2[i] == "text") {
+                icon2text = icon2[i+1]
+            }
+            i++;
+        }
+        let toggleBtnElement = `
+            <label for="`+ attriId +`checkbox" class="han-togglebtn-toggler" id="`+ attriId +`">
+                <input type="checkbox" class="han-togglebtn-checkbox" id="`+ attriId +`checkbox">
+                <span class="han-togglebtn-ball"></span>
+                <i class="`+ icon1class +` han-togglebtn-icon1">`+ icon1text +`</i>
+                <i class="`+ icon2class +` han-togglebtn-icon2">`+ icon2text +`</i>
+            </label>
+        `; 
+        
+        
+        attri.innerHTML = toggleBtnElement;
+        
+    }
+
+    function togglebtnLeftvalue() {
+        console.log("run left")
+        return "left;"
+        
+    }
+    function togglebtnRightvalue() {
+        console.log("run right")
+        return "Right;"
+
+    }
+    
+    
+    function hantogglebtnValue(e) {
+        let togglerid = "#" + hanAttri + "toggler";
+        let togglebtn = document.querySelector(togglerid);
+        let checkboxid = "#" + hanAttri + "checkbox"; 
+        let checkbox = document.querySelector(checkboxid);
+        if(e.pointerId == -1) {
+            if(checkbox.checked == true) {
+                return "right"
+            }else{
+                return "left"
+            }
+        }
+    }
+
+    // checkboxCheck is check box is  checked and uncheck
+    // this check have to be true or false
+    function checkBox(checkboxProp = 'checked', checkboxCheck) {
+        attri.checked = checkboxCheck;
+    }
+
+    // this is for innerhtml js attribute
+    function hanInnerHtml(hanHtml) {
+        attri.innerHTML = hanHtml;
+    } 
+    
+    return {
+        prop: checkBox,
+        html: hanInnerHtml,
+        makeTogBtn: createhanToggleBtn,
+        TogBtnValue: hantogglebtnValue,
+    }
+}

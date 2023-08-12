@@ -9,7 +9,7 @@ function similarwordlist(list) {
     //   [{"word":"取ります (自)", "meaning":"Take", "Eg":["年を取ります"]}],
     //]
     similarworddata += `
-    <div class="alert alert-dark mb-3 similarword-list" role="alert">
+    <div class="alert alert-dark mb-3 similarword-list text-dark" role="alert">
         `+ list.word +`
         <a tabindex="0" class="btn btn-info" role="button" 
             data-bs-toggle="popover" 

@@ -39,3 +39,26 @@ for( var i=0; i < dropdownitem.length; i++){
     } );
 }
 
+// this is toggler btn for day and night 
+function daynight() {
+    han("#daynight").makeTogBtn(['class','bi bi-moon moon'],['class','bi bi-brightness-high'],'daynightbtn')
+    // nga function ko ngam kyite ty wo 
+    let daynightbtn = document.querySelector("#daynightbtn");
+    let html = document.querySelector('html');
+    let similarword = document.querySelector("#similarword-container");
+    daynightbtn.addEventListener("click", function(e){
+        let v = han('daynightbtn').TogBtnValue(e);
+        console.log(v)
+        if(v == "left") {
+
+            html.setAttribute("data-bs-theme","light");
+        }else{
+            html.setAttribute("data-bs-theme","dark");
+            similarword.style.color = "black";
+
+        }
+    })
+}
+
+daynight();
+
