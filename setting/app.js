@@ -43,9 +43,10 @@ for( var i=0; i < dropdownitem.length; i++){
 function daynight() {
     han("#daynight").makeTogBtn(['class','bi bi-moon moon'],['class','bi bi-brightness-high'],'daynightbtn')
     function dn(v){
-        console.log("valiue ", v)
+        let btnd = document.querySelector('#btndirection')
         let html = document.querySelector('html');
         let similarword = document.querySelector("#similarword-container");
+        btnd.textContent = v;
             if(v == "left") {
     
                 html.setAttribute("data-bs-theme","light");
