@@ -47,9 +47,11 @@ for (let s = 0; s < datasbox.length; s++) {
     //(end)this code copy from app.js 
 }
 
+
 // ့!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! here also make some check and make real your package
-function han(hanAttri) {
-    let attri = document.querySelector(hanAttri);
+function han(hanAttri='') {
+        let attri = document.querySelector(hanAttri);
+
     function createhanToggleBtn(icon1, icon2, attriId, color='#4672fe') {
         let i = 0, icon1text = "", icon1class = "",icon2text = "", icon2class = "";
         while(i < icon1.length) {
@@ -98,9 +100,9 @@ function han(hanAttri) {
     
     
     function hantogglebtnValue(e) {
-        let togglerid = "#" + hanAttri + "toggler";
+        let togglerid = hanAttri + "toggler";
         let togglebtn = document.querySelector(togglerid);
-        let checkboxid = "#" + hanAttri + "checkbox"; 
+        let checkboxid = hanAttri + "checkbox"; 
         let checkbox = document.querySelector(checkboxid);
         if(e.pointerId == -1) {
             if(checkbox.checked == true) {
@@ -110,6 +112,14 @@ function han(hanAttri) {
             }
         }
     }
+
+    function btnFuncA(func) {
+        attri.addEventListener("click", function(e){
+            let v = hantogglebtnValue(e);
+            func(v);
+        })
+    }
+
 
     // checkboxCheck is check box is  checked and uncheck
     // this check have to be true or false
@@ -126,6 +136,6 @@ function han(hanAttri) {
         prop: checkBox,
         html: hanInnerHtml,
         makeTogBtn: createhanToggleBtn,
-        TogBtnValue: hantogglebtnValue,
+        btnFunc:btnFuncA,
     }
 }
